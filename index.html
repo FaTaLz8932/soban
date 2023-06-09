@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Picture Website</title>
+    <style>
+        body {
+            font-family: Times New Roman, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("background.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        h1 {
+            color: #fff;
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .button-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .button-container {
+            margin-top: 20px;
+        }
+        
+        .button {
+            display: inline-block;
+            padding: 20px 30px;
+            background-color: #333333;
+            color: #ffffff;
+            text-decoration: none;
+            margin: 10px;
+            border-radius: 20px;
+            border: none;
+            font-size: 16px;
+            text-align: center;
+            width: 150px;
+        }
+    </style>
+    <script>
+        function authenticate() {
+            var password = prompt("Please enter the password:");
+            if (password === "souban") {
+                window.location.href = "page2.html";
+            } else {
+                alert("Incorrect password. Please try again.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="button-wrapper">
+            <h1>Bonjour! My name is Saad</h1>
+            <div class="button-container">
+                <a class="button" href="page1.html">Page 1</a>
+                <button class="button" onclick="authenticate()">Page 2</button>
+            </div>
+        </div>
+    </header>
+</body>
+</html>
